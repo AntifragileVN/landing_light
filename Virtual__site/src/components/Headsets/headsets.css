@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../font/Orbitron-Medium.eot');
+    src: local('Orbitron Medium'), local('Orbitron-Medium'),
+        url('Orbitron-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Orbitron-Medium.woff2') format('woff2'),
+        url('Orbitron-Medium.woff') format('woff'),
+        url('Orbitron-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../font/Orbitron-Black.eot');
+    src: local('Orbitron Black'), local('Orbitron-Black'),
+        url('Orbitron-Black.eot?#iefix') format('embedded-opentype'),
+        url('Orbitron-Black.woff2') format('woff2'),
+        url('Orbitron-Black.woff') format('woff'),
+        url('Orbitron-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../font/Orbitron-Bold.eot');
+    src: local('Orbitron Bold'), local('Orbitron-Bold'),
+        url('Orbitron-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Orbitron-Bold.woff2') format('woff2'),
+        url('Orbitron-Bold.woff') format('woff'),
+        url('Orbitron-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../font/Orbitron-Regular.eot');
+    src: local('Orbitron Regular'), local('Orbitron-Regular'),
+        url('Orbitron-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Orbitron-Regular.woff2') format('woff2'),
+        url('Orbitron-Regular.woff') format('woff'),
+        url('Orbitron-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+*{
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Inter';
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+    
+}
+
+.container{
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 10px;
+    /* position: relative; */
+}
+
+.headsets__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.headsets__title{
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 17.0986px;
+    line-height: 27px;
+    justify-content: start;
+    margin-left: 43px;
+}
+
+.headsets__order{
+    justify-content: end;
+    margin-right: 42px;
+   
+}
+option{
+    color: #000;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+select{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 4px;
+}
+
+.headsets__images{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+    margin-left: 42px;
+}
+
+.headsets__item{
+    position: relative;
+}
+
+.headsetes__img{
+position: relative;
+height: 100%;
+}
+
+.headsets__img-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(11px);
+    border-radius: 0px 5px 0px 5px;
+
+    max-width: 107px;
+
+}
+
+.headsetes__img-name{
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 7.29569px;
+    line-height: 9px;
+    text-align: center;
+    text-decoration-line: underline;
+
+    /* margin: 7px 0px 6px 12px; */
+    margin-top: 7px;
+    margin-left:  12px;
+    margin-bottom: 6px;
+}
+
+.headsetes__img-description{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7.29569px;
+    line-height: 9px;
+    letter-spacing: -0.02em;
+
+    margin-left: 12px;
+    margin-bottom: 7px;
+}
+
+.headsets__pages-list{
+    margin-top: 23px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.headsets__pages{
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    padding: 0;
+}
+
+
+
+.headsets__list-item{
+    background-color: #fff;
+    border: 1px solid #DFE3E8;
+    border-radius: 4px;     
+}
+
+.headsets__list-item--color{
+    background-color: #919EAB;
+    opacity: 0.5;
+    border-radius: 4px;
+}
+
+.headsets__link{
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+
+    color: #212B36;
+    padding: 5px;
+    color: #000;
+}
+
+
+
