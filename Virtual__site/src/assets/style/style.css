@@ -434,6 +434,12 @@ select {
   background-color: #fff;
   border: 1px solid #dfe3e8;
   border-radius: 4px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 5px 5px;
+  min-width: 32px;
+  max-height: 32px;
 }
 
 .headsets__list-item--color {
@@ -443,15 +449,13 @@ select {
 }
 
 .headsets__link {
-  font-family: "SF Pro Text";
+  font-family: "SF Pro Text", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  text-align: center;
 
   color: #212b36;
-  padding: 5px;
   color: #000;
 }
 
