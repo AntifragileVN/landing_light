@@ -741,6 +741,7 @@ select {
 
 .footer__form {
   padding: 18px 0px 46px 17px;
+  margin-right: 164px;
 }
 
 .footer__submit {
@@ -762,7 +763,6 @@ select {
   background-image: url(/Task6/src/components/images/Footer__decoration.png);
 
   max-width: 854px;
-  /* padding-bottom: 15px; */
   background-position: right;
   background-position-y: 15px;
   border-radius: 0px 7px 7px 0px;
