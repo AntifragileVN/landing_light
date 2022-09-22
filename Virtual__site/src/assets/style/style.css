@@ -430,7 +430,7 @@ select {
   padding: 0;
 }
 
-.headsets__list-item {
+.headsets__link {
   background-color: #fff;
   border: 1px solid #dfe3e8;
   border-radius: 4px;
@@ -440,24 +440,41 @@ select {
   padding: 5px 5px;
   min-width: 32px;
   max-height: 32px;
-}
 
-.headsets__list-item--color {
-  background-color: #919eab;
-  opacity: 0.5;
-  border-radius: 4px;
-  border: none;
-}
-
-.headsets__link {
   font-family: "SF Pro Text", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-
-  color: #212b36;
   color: #000;
+}
+
+.headsets__link:hover {
+  color: #4200ff;
+  border: 1px solid #4200ff;
+}
+
+.headsets__link--color {
+  background-color: #919eab;
+  border-radius: 4px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 5px 5px;
+  min-width: 32px;
+  min-height: 32px;
+
+  font-family: "SF Pro Text", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #c4cdd5;
+}
+
+.headsets__link--color:hover {
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .reviews__inner {
