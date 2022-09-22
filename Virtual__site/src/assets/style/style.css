@@ -440,6 +440,7 @@ select {
   background-color: #919eab;
   opacity: 0.5;
   border-radius: 4px;
+  border: none;
 }
 
 .headsets__link {
