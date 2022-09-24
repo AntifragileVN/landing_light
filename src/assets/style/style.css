@@ -11,13 +11,24 @@ a {
 
 body {
   background-color: black;
-  overflow-x: hidden;
 }
 
 .container {
   max-width: 860px;
   margin: 0 auto;
   position: relative;
+}
+
+.elipse__container {
+  /* overflow: hidden; */
+}
+
+.title {
+  font-family: "Orbitron";
+  font-weight: 800;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
 }
 
 .button {
@@ -60,7 +71,7 @@ body {
   height: 552.48px;
   border-radius: 50%;
   position: absolute;
-  z-index: -1;
+  z-index: 10;
 }
 
 .menu {
@@ -124,9 +135,11 @@ body {
   padding-top: 83px;
   display: flex;
   gap: 73px;
+  overflow: hidden;
+  position: relative;
 }
 
-.dimensional__inner::after {
+.dimensional__inner::before {
   content: "";
   background: radial-gradient(
     37.26% 37.26% at 3.09% 44.12%,
@@ -183,21 +196,12 @@ body {
   margin-left: 20px;
 }
 
-.title {
-  font-family: "Orbitron";
-  font-weight: 800;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 25px;
-}
-
 .dimensional__title {
   font-weight: 900;
   font-style: normal;
   font-weight: 900;
   font-size: 32px;
   line-height: 43px;
-  position: relative;
   max-width: 336px;
 }
 
@@ -215,14 +219,25 @@ body {
 }
 
 .dimensional__decor {
-  position: absolute;
-  z-index: -1;
+  position: relative;
+  z-index: 50;
 }
 
 .dimensional__cinematic {
   position: relative;
   display: flex;
   justify-content: center;
+}
+
+.dimensional__cinematic-wrapper {
+  max-width: 274px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 316px;
+  left: 63px;
+  z-index: 100;
 }
 
 .dimensional__cinematic-line {
@@ -247,16 +262,6 @@ body {
   line-height: 13px;
   text-align: center;
   max-width: 204px;
-}
-
-.dimensional__cinematic-wrapper {
-  max-width: 274px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  top: 295px;
-  right: 9px;
 }
 
 .expirience__inner {
@@ -300,6 +305,9 @@ body {
 
 .expirience__info {
   margin-top: 167px;
+}
+
+.expirience__info::before {
 }
 
 .expirience__title {
@@ -361,6 +369,10 @@ body {
   max-width: 290px;
 }
 
+.headsets__inner {
+  padding-left: 43px;
+}
+
 .headsets__top {
   display: flex;
   justify-content: space-between;
@@ -375,12 +387,10 @@ body {
   font-size: 17.0986px;
   line-height: 27px;
   justify-content: start;
-  margin-left: 43px;
 }
 
 .headsets__order {
   justify-content: end;
-  margin-right: 42px;
 }
 option {
   color: #000;
@@ -398,7 +408,13 @@ select {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 40px;
-  margin-left: 42px;
+}
+
+.headsets__images-mobile {
+  display: none;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(3, auto);
+  gap: 40px;
 }
 
 .headsets__item {
@@ -589,8 +605,12 @@ select {
 
   backdrop-filter: blur(6px);
   border-radius: 7px;
-
+  max-width: 143px;
   padding: 5px 7px 7px 10px;
+}
+
+.reviews__massages-mobile {
+  display: none;
 }
 
 .reviews__mes-title {
@@ -601,10 +621,6 @@ select {
   line-height: 9px;
   letter-spacing: 0.07em;
   margin-bottom: 9px;
-}
-
-.reviews__massage {
-  max-width: 143px;
 }
 
 .reviews__text {
@@ -814,10 +830,208 @@ select {
 }
 
 .footer__decoration {
-  background-image: url(/Task6/src/components/images/Footer__decoration.png);
-
   max-width: 854px;
   background-position: right;
   background-position-y: 15px;
   border-radius: 0px 7px 7px 0px;
+}
+
+.footer__decoration-mobile {
+  display: none;
+  object-fit: cover;
+  z-index: 3;
+  opacity: 0.7;
+  background-position: right;
+  background-position-y: 15px;
+  border-radius: 0px 7px 7px 0px;
+}
+
+@media screen and (max-device-width: 576px) {
+  .container {
+    max-width: 390px;
+  }
+  .dimensional__inner {
+    flex-direction: column-reverse;
+    padding-top: 33px;
+    gap: 24px;
+  }
+
+  .expirience__inner {
+    padding: 0px 16px;
+    flex-direction: column;
+  }
+
+  .dimensional__title {
+    font-size: 23px;
+    line-height: 33px;
+    text-align: center;
+    /* max-width: ; */
+  }
+
+  .dimensional__explore {
+    margin-left: 0;
+    margin-bottom: 24px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dimensional__text {
+    max-width: 330px;
+    text-align: center;
+  }
+
+  .dimensional__btn {
+    padding: 11px 47px;
+  }
+
+  .expirince__fotos {
+    margin: 0px 0px 24px 0px;
+    justify-content: center;
+  }
+
+  .foto-boy {
+    max-width: 170px;
+  }
+
+  .foto-girl {
+    max-width: 170px;
+  }
+
+  .expirience__info {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .expirience__title {
+    max-width: 100%;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .expirience__text {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .expirience__button {
+    padding: 11px 77px;
+    max-width: 100%;
+    width: auto;
+  }
+
+  .thick-line__inner {
+    padding: 9px 28px 9px 10px;
+  }
+
+  .thick-line__text {
+    font-size: 14px;
+  }
+
+  .thick-line__decor {
+    border-radius: 7px 20px 7px 7px;
+    max-width: 92px;
+  }
+
+  .headsets__inner {
+    padding: 0px 18px;
+  }
+
+  .headsets__order {
+    max-width: 103px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 143%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.018em;
+  }
+
+  .headsets__title {
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 10px;
+    line-height: 27px;
+  }
+
+  .headsets__images {
+    display: none;
+  }
+
+  .headsets__images-mobile {
+    display: grid;
+    justify-items: center;
+  }
+
+  .reviews__massages {
+    display: none;
+  }
+
+  .reviews__inner {
+    padding-bottom: 0px;
+  }
+
+  .reviews__massage {
+    max-width: 300px;
+    padding: 11px 136px 15px 22px;
+  }
+
+  .reviews__person-login {
+    margin: 3px 0px;
+  }
+
+  .reviews__text {
+    max-width: 130px;
+    margin-bottom: 44px;
+  }
+
+  .values__inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+  }
+
+  .values__inner::before {
+    right: 100px;
+  }
+
+  .values__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .values__title {
+    margin-bottom: 16px;
+  }
+
+  .footer__inner {
+    padding: 0px 20px 10px 16px;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .footer__form {
+    /* max-width: 168px; */
+    padding: 25px 0px 22px 14px;
+    margin-right: -25px;
+    z-index: 4;
+    background: transparent;
+  }
+
+  .footer__decoration {
+    display: none;
+  }
+
+  .footer__decoration-mobile {
+    display: block;
+    width: 80%;
+  }
 }
