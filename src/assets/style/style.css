@@ -20,7 +20,7 @@ body {
 }
 
 .elipse__container {
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .title {
@@ -135,11 +135,16 @@ body {
   padding-top: 83px;
   display: flex;
   gap: 73px;
-  overflow: hidden;
   position: relative;
 }
 
-.dimensional__inner::before {
+.dimensional__elipse {
+  position: absolute;
+  top: 300px;
+  right: 10%;
+}
+
+.dimensional__elipse::before {
   content: "";
   background: radial-gradient(
     37.26% 37.26% at 3.09% 44.12%,
@@ -150,8 +155,6 @@ body {
   height: 645px;
   border-radius: 50%;
   position: absolute;
-  left: 780px;
-  bottom: -380px;
   z-index: -1;
 }
 
@@ -305,9 +308,6 @@ body {
 
 .expirience__info {
   margin-top: 167px;
-}
-
-.expirience__info::before {
 }
 
 .expirience__title {
