@@ -131,20 +131,19 @@ body {
   justify-content: center;
 }
 
-.dimensional__inner {
+.hero__inner {
   padding-top: 83px;
   display: flex;
-  gap: 73px;
   position: relative;
 }
 
-.dimensional__elipse {
+.hero__elipse {
   position: absolute;
   top: 300px;
   right: 10%;
 }
 
-.dimensional__elipse::before {
+.hero__elipse::before {
   content: "";
   background: radial-gradient(
     37.26% 37.26% at 3.09% 44.12%,
@@ -158,14 +157,14 @@ body {
   z-index: -1;
 }
 
-.dimensional__explore {
+.hero__explore {
   display: flex;
   flex-direction: column;
   margin-left: 58px;
   margin-bottom: 140px;
 }
 
-.dimensional__btn {
+.hero__btn {
   padding: 12px 9px;
 
   font-family: "Inter";
@@ -175,31 +174,31 @@ body {
   line-height: 13px;
 }
 
-.dimensional__people {
+.hero__people {
   display: flex;
   align-items: center;
   margin-top: 27px;
 }
-.dimensional__people-list {
+.hero__people-list {
   list-style: none;
   display: flex;
   padding: 0;
 }
 
-.dimensional__link {
+.hero__link {
   margin-left: 24px;
   white-space: nowrap;
 }
 
-.dimensional__people-item {
+.hero__people-item {
   margin: -3px;
 }
 
-.dimensional__people-online {
+.hero__people-online {
   margin-left: 20px;
 }
 
-.dimensional__title {
+.hero__title {
   font-weight: 900;
   font-style: normal;
   font-weight: 900;
@@ -208,7 +207,7 @@ body {
   max-width: 336px;
 }
 
-.dimensional__text {
+.hero__text {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -221,43 +220,43 @@ body {
   margin-bottom: 25px;
 }
 
-.dimensional__decor {
+.hero__decor {
   position: relative;
   z-index: 50;
 }
 
-.dimensional__cinematic {
+.hero__cinematic {
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-.dimensional__cinematic-wrapper {
+.hero__cinematic-wrapper {
   max-width: 274px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 316px;
+  top: 297px;
   left: 63px;
   z-index: 100;
 }
 
-.dimensional__cinematic-line {
+.hero__cinematic-line {
   content: "";
   border: 1px solid #fff;
   min-width: 152px;
   margin-bottom: 25px;
 }
 
-.dimensional__cinematic-title {
+.hero__cinematic-title {
   margin-bottom: 21px;
   width: 100%;
   max-width: 290px;
   white-space: nowrap;
 }
 
-.dimensional__cinematic-text {
+.hero__cinematic-text {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -848,9 +847,9 @@ select {
 
 @media screen and (max-device-width: 576px) {
   .container {
-    max-width: 390px;
+    max-width: 576px;
   }
-  .dimensional__inner {
+  .hero__inner {
     flex-direction: column-reverse;
     padding-top: 33px;
     gap: 24px;
@@ -861,27 +860,32 @@ select {
     flex-direction: column;
   }
 
-  .dimensional__title {
+  .hero__title {
     font-size: 23px;
     line-height: 33px;
     text-align: center;
     /* max-width: ; */
   }
 
-  .dimensional__explore {
+  .hero__explore {
     margin-left: 0;
     margin-bottom: 24px;
     justify-content: center;
     align-items: center;
   }
 
-  .dimensional__text {
+  .hero__text {
     max-width: 330px;
     text-align: center;
   }
 
-  .dimensional__btn {
+  .hero__btn {
     padding: 11px 47px;
+  }
+
+  .hero__cinematic-wrapper {
+    top: 302px;
+    left: 140px;
   }
 
   .expirince__fotos {
@@ -976,7 +980,12 @@ select {
     padding-bottom: 0px;
   }
 
+  .reviews__massages-mobile {
+    display: block;
+  }
+
   .reviews__massage {
+    display: block;
     max-width: 300px;
     padding: 11px 136px 15px 22px;
   }
