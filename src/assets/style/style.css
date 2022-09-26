@@ -1029,7 +1029,7 @@ select {
   }
 
   .footer__inner {
-    padding: 0px 0px 10px 0px;
+    padding: 0px 0px 10px 16px;
     margin: 0;
     justify-content: center;
   }
