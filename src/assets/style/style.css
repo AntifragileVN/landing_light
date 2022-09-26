@@ -59,7 +59,7 @@ body {
   align-items: center;
   padding: 19px 58px 0px;
 }
-/* 
+
 .header__inner::before {
   content: "";
   background: radial-gradient(
@@ -72,7 +72,7 @@ body {
   border-radius: 50%;
   position: absolute;
   z-index: -1;
-} */
+}
 
 .menu {
   display: flex;
@@ -149,7 +149,7 @@ body {
   right: 10%;
 }
 
-/* .hero__elipse::before {
+.hero__elipse::before {
   content: "";
   background: radial-gradient(
     37.26% 37.26% at 3.09% 44.12%,
@@ -161,7 +161,7 @@ body {
   border-radius: 50%;
   position: absolute;
   z-index: -1;
-} */
+}
 
 .hero__explore {
   display: flex;
@@ -279,7 +279,7 @@ body {
   padding-bottom: 60px;
 }
 
-/* .expirience__inner::before {
+.expirience__inner::before {
   content: "";
   background: radial-gradient(
     37.26% 37.26% at 50% 50%,
@@ -294,7 +294,7 @@ body {
 
   top: -260px;
   left: -150px;
-} */
+}
 
 .expirince__fotos {
   display: flex;
@@ -547,7 +547,7 @@ select {
   width: 100%;
 }
 
-/* .reviews__inner::before {
+.reviews__inner::before {
   content: "";
   background: radial-gradient(
     37.26% 37.26% at 50% 50%,
@@ -562,7 +562,7 @@ select {
 
   right: 100px;
   bottom: -170px;
-} */
+}
 
 .reviews__title {
   font-family: "Orbitron";
@@ -675,7 +675,7 @@ select {
   /* gap: 48px; */
 }
 
-/* .values__inner::before {
+.values__inner::before {
   content: "";
   background: radial-gradient(
     37% 37% at 50% 50%,
@@ -690,7 +690,7 @@ select {
 
   top: -80px;
   right: 610px;
-} */
+}
 
 .values__title {
   font-family: "Orbitron";
@@ -858,10 +858,8 @@ select {
     padding: 19px 0px 0px;
   }
 
-  .hero__inner {
-    flex-direction: column-reverse;
-    padding-top: 33px;
-    gap: 24px;
+  .header__inner::before {
+    right: 115px;
   }
 
   .expirience__inner {
@@ -873,6 +871,17 @@ select {
     font-size: 23px;
     line-height: 33px;
     text-align: center;
+  }
+
+  .hero__inner {
+    padding: 19px 0px 0px;
+    flex-direction: column-reverse;
+    padding-top: 33px;
+    gap: 24px;
+  }
+
+  .hero__elipse::before {
+    display: none;
   }
 
   .hero__explore {
@@ -889,6 +898,11 @@ select {
 
   .hero__btn {
     padding: 11px 47px;
+  }
+
+  .expirience__inner::before {
+    left: 220px;
+    top: 190px;
   }
 
   .expirince__fotos {
@@ -987,6 +1001,11 @@ select {
     padding-bottom: 0px;
   }
 
+  .reviews__inner::before {
+    right: -101px;
+    top: 47px;
+  }
+
   .reviews__massages-mobile {
     display: block;
   }
@@ -1011,6 +1030,10 @@ select {
     justify-content: center;
     align-items: center;
     padding: 40px 0;
+  }
+
+  .values__inner::before {
+    display: none;
   }
 
   .values__inner::before {
