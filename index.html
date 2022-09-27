@@ -13,12 +13,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="body">
 <div class="elipse__container">
     <header class="header">
         <div class="container">
             <div class="header__inner">
         <img class="logo" src="src/assets/icons/Header__logo.svg">
+
+        <button class="header__burger">
+            <img src="src/assets/icons/Header__burger.svg" alt="burger__menu">
+        </button>
+            <nav class="header__mobile-menu">
+<div class="header__mobile-buttons"> <button class="header__close-btn"><img  src="src/assets/icons/Header__burger-close.svg" alt="close"></button></div>
+               
+                <ul class="menu__list">
+                    
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Card managment</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Company</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Features</a>
+                    </li>
+                </ul>
+                <button class="menu__button"><a class="btn-link" href="SignIn.html">Sign in</a></button>
+            </nav>
         <nav class="menu">
             <ul class="menu__list">
                 <li class="menu__item menu__item--active ">
@@ -36,6 +60,7 @@
         </nav>
     </div>
     </header>
+    <script src="src/assets/scripts/index.js"></script>
 <main>
     <section class="hero">
     <div class="container">
