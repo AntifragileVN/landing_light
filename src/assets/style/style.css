@@ -100,21 +100,21 @@ a {
 }
 
 .header__mobile-menu {
-  display: none;
   background: #000;
   border-radius: 7px;
   flex-direction: column;
   padding: 12px;
   max-width: 223px;
   position: absolute;
-  right: -12px;
-  top: 13px;
+  right: -16px;
+  top: 3px;
   z-index: 100;
   letter-spacing: 0.0275em;
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
   border: 0.5px solid rgb(49, 49, 49);
+  transition: 0.3s;
 }
 
 .menu__list {
@@ -851,7 +851,7 @@ select {
 
 .footer__form {
   padding: 18px 0px 46px 17px;
-  margin-right: 164px;
+  max-width: 164px;
 }
 
 .footer__submit {
@@ -871,8 +871,6 @@ select {
 
 .footer__decoration {
   max-width: 854px;
-  background-position: right;
-  background-position-y: 15px;
   border-radius: 0px 7px 7px 0px;
 }
 
@@ -887,6 +885,11 @@ select {
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0px 17px;
+  }
+
   .menu {
     display: none;
   }
@@ -912,30 +915,6 @@ select {
 
   .menu__button {
     padding: 8px 22px;
-  }
-
-  .header__mobile-menu {
-    display: flex;
-  }
-}
-
-@media screen and (max-device-width: 576px) {
-  .container {
-    max-width: 576px;
-    padding: 0px 17px;
-  }
-
-  .header__inner {
-    padding: 19px 0px 0px;
-  }
-
-  .header__inner::before {
-    right: 115px;
-  }
-
-  .expirience__inner {
-    padding: 0px 16px;
-    flex-direction: column;
   }
 
   .hero__title {
@@ -969,6 +948,48 @@ select {
 
   .hero__btn {
     padding: 11px 47px;
+  }
+
+  .headsets__images {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .headsets__inner {
+    padding-left: 43px;
+  }
+
+  .expirince__fotos {
+    margin-left: 0;
+  }
+
+  .footer__form {
+    margin-right: -20px;
+    z-index: 5;
+  }
+
+  .footer__decoration {
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 576px;
+    padding: 0px 17px;
+  }
+
+  .header__inner {
+    padding: 19px 0px 0px;
+  }
+
+  .header__inner::before {
+    right: 115px;
+  }
+
+  .expirience__inner {
+    flex-direction: column;
   }
 
   .expirience__inner::before {
@@ -1057,6 +1078,10 @@ select {
 
   .headsets__images {
     display: none;
+  }
+
+  .headsetes__img {
+    max-width: 100%;
   }
 
   .headsets__images-mobile {
