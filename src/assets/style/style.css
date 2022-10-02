@@ -2,6 +2,7 @@
   box-sizing: border-box;
   color: white;
   font-family: "Inter";
+  font-style: normal;
 }
 
 a {
@@ -38,16 +39,12 @@ a {
   text-decoration: none;
   border: none;
 
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
   font-size: 11px;
   line-height: 13px;
 }
-
+/* ********************** Header ******************************* */
 .btn-link {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
   font-size: 11px;
   line-height: 13px;
@@ -86,6 +83,7 @@ a {
   border: none;
   cursor: pointer;
   padding: 4px;
+  z-index: 100;
 }
 
 .header__close-btn {
@@ -100,7 +98,10 @@ a {
 }
 
 .header__mobile-menu {
+  display: none;
   background: #000;
+  transition: 0.3s;
+  opacity: 0;
   border-radius: 7px;
   flex-direction: column;
   padding: 12px;
@@ -114,7 +115,6 @@ a {
   font-size: 16px;
   line-height: 100%;
   border: 0.5px solid rgb(49, 49, 49);
-  transition: 0.3s;
 }
 
 .menu__list {
@@ -125,9 +125,6 @@ a {
 .menu__item {
   margin-right: 35px;
   font-weight: 500;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
   font-size: 12.5098px;
   line-height: 15px;
 }
@@ -143,8 +140,6 @@ a {
   background: linear-gradient(99.05deg, #c824ec 0.07%, #df308d 106.32%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
   font-size: 12.5098px;
   line-height: 15px;
@@ -174,6 +169,8 @@ a {
   align-items: center;
   justify-content: center;
 }
+
+/* ********************** Hero ******************************* */
 
 .hero__inner {
   padding-top: 83px;
@@ -211,8 +208,6 @@ a {
 .hero__btn {
   padding: 12px 9px;
 
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
   font-size: 11px;
   line-height: 13px;
@@ -301,14 +296,14 @@ a {
 }
 
 .hero__cinematic-text {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
   text-align: center;
   max-width: 204px;
 }
+
+/* ********************** Expririence ******************************* */
 
 .expirience__inner {
   display: flex;
@@ -365,8 +360,6 @@ a {
 
 .expirience__text {
   max-width: 218px;
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
@@ -378,13 +371,12 @@ a {
   padding: 10px 18px;
   width: 100%;
   white-space: nowrap;
-
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
   font-size: 11px;
   line-height: 13px;
 }
+
+/* ********************** Thick-line ******************************* */
 
 .thick-line__inner {
   border: 5px solid linear-gradient(#ffffff, #aa14f0);
@@ -408,6 +400,8 @@ a {
   line-height: 23px;
   max-width: 290px;
 }
+
+/* ********************** Headsets ******************************* */
 
 .headsets__inner {
   padding-left: 43px;
@@ -496,8 +490,6 @@ select {
 }
 
 .headsetes__img-description {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 400;
   font-size: 7.29569px;
   line-height: 9px;
@@ -565,6 +557,8 @@ select {
   border: 1px solid #fff;
 }
 
+/* ********************** Reviews ******************************* */
+
 .reviews__inner {
   display: flex;
   flex-direction: column;
@@ -615,8 +609,6 @@ select {
 }
 
 .reviews__subtitle {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 400;
   font-size: 9px;
   line-height: 11px;
@@ -654,8 +646,6 @@ select {
 }
 
 .reviews__mes-title {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
   font-size: 4.97691px;
   line-height: 9px;
@@ -669,7 +659,6 @@ select {
   font-weight: 400;
   font-size: 5.52896px;
   line-height: 9px;
-  /* padding: 0 9px; */
   margin-bottom: 12px;
 }
 
@@ -687,8 +676,6 @@ select {
 }
 
 .reviews__person-login {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 500;
   font-size: 5px;
   line-height: 9px;
@@ -696,8 +683,6 @@ select {
 }
 
 .reviews__person-adress {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 500;
   font-size: 5px;
   line-height: 9px;
@@ -706,11 +691,12 @@ select {
   color: #eb4468;
 }
 
+/* ********************** Values ******************************* */
+
 .values__inner {
   display: flex;
   justify-content: center;
   padding: 32px 0px 46px 0px;
-  /* gap: 48px; */
 }
 
 .values__inner::before {
@@ -742,27 +728,20 @@ select {
 }
 
 .values__text {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 0.02em;
-
   max-width: 248px;
 }
-
-/* .values__info {
-  margin-top: 32px;
-} */
 
 .values__images {
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
   gap: 10px 28px;
-  /* margin-top: 17px; */
 }
+
 .values__item {
   display: flex;
   flex-direction: column;
@@ -771,14 +750,13 @@ select {
 }
 
 .values__description {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 600;
   font-size: 7px;
   line-height: 11px;
-
   letter-spacing: 0.03em;
 }
+
+/* ********************** Footer ******************************* */
 
 .footer__inner {
   display: flex;
@@ -808,8 +786,6 @@ select {
 }
 
 .footer__text {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 400;
   font-size: 9px;
   line-height: 11px;
@@ -825,8 +801,6 @@ select {
 }
 
 .footer__input {
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 400;
   font-size: 6.48506px;
   line-height: 11px;
@@ -858,8 +832,6 @@ select {
   padding: 5px 9px 5px 13px;
   display: flex;
   align-items: center;
-  font-family: "Inter";
-  font-style: normal;
   font-weight: 700;
   font-size: 7px;
   line-height: 8px;
@@ -884,6 +856,8 @@ select {
   border-radius: 0px 7px 7px 0px;
 }
 
+/* ********************** Media max-width:768px ******************************* */
+
 @media screen and (max-width: 768px) {
   .container {
     max-width: 768px;
@@ -895,6 +869,10 @@ select {
   }
 
   .header__burger {
+    display: block;
+  }
+
+  .header__mobile-menu {
     display: block;
   }
 
@@ -973,6 +951,8 @@ select {
     z-index: 1;
   }
 }
+
+/* ********************** Media max-width: 576px ******************************* */
 
 @media screen and (max-width: 576px) {
   .container {
@@ -1154,7 +1134,6 @@ select {
   }
 
   .footer__form {
-    /* max-width: 168px; */
     padding: 25px 0px 22px 14px;
     margin-right: -25px;
     z-index: 4;

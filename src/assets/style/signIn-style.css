@@ -1,84 +1,93 @@
-
-*{
-    /* background: #000; */
-    box-sizing: border-box;
-    color: white;
-    font-family: 'Inter';
+* {
+  /* background: #000; */
+  box-sizing: border-box;
+  color: white;
+  font-family: "Inter";
 }
 
-body{
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: #09010E;
- 
-}
-   
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.sign-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    max-width: 560px;
+  background: #09010e;
 }
 
-.sign-form__title{
-    font-family: 'Orbitron';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 30px;
-    text-align: center; 
-
-    padding-bottom: 24px;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 880px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.sign-form__inputs{
-    margin-bottom: 32px;
-    text-align: start;
-    width: 100%;
+.sign-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 560px;
 }
 
-.input{
-    background-color: transparent;
-    border: 2px solid #C8D1E6;
-    border-radius: 5px; 
-    padding: 32px 18px ;
-    min-width: 560px;
-    max-height: 60px;
+.sign-form__title {
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
 
-    font-family: 'Mulish', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 23px;
-    opacity: 0.5;
+  padding-bottom: 24px;
 }
 
-.sign-form__email{
-    margin-bottom: 16px;
+.sign-form__inputs {
+  margin-bottom: 32px;
+  text-align: start;
+  width: 100%;
 }
 
-.sign-form__password{
-    margin-bottom: 32px;
+.input {
+  background-color: transparent;
+  border: 2px solid #c8d1e6;
+  border-radius: 5px;
+  padding: 32px 18px;
+  min-width: 560px;
+  max-height: 60px;
+
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  opacity: 0.5;
 }
 
-.sign-form__button{
-    width: 320px;
+.sign-form__email {
+  margin-bottom: 16px;
 }
 
-.btn{
-    background-color: #9F62BB;
-    border-radius: 5px;
-    padding: 12px 0;
-    width: 100%;
+.sign-form__password {
+  margin-bottom: 32px;
+}
 
-    font-family: 'Mulish', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 23px;
+.sign-form__button {
+  width: 320px;
+}
+
+.btn {
+  background-color: #9f62bb;
+  border-radius: 5px;
+  padding: 12px 0;
+  width: 100%;
+
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
 }

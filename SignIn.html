@@ -17,26 +17,30 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign in</title>
   </head>
   <body>
     <div class="container">
-      <form class="sign-form">
+      <form class="sign-form sign-in-form">
         <div class="sign-form__title">Sign in</div>
         <input
           class="sign-form__email input"
           type="text"
+          name="userName"
           placeholder="Email or username"
         />
         <input
           class="sign-form__password input"
           type="password"
+          name="password"
           placeholder="Password"
         />
         <div class="sign-form__button">
-          <button class="btn">Sign in</button>
+          <button class="btn" type="submit">Sign in</button>
         </div>
       </form>
     </div>
+    <script src="src/assets/scripts/authorForm.js"></script>
   </body>
 </html>
