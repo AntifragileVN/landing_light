@@ -21,25 +21,29 @@
     <title>Sign in</title>
   </head>
   <body>
-    <div class="container">
-      <form class="sign-form sign-in-form">
-        <div class="sign-form__title">Sign in</div>
-        <input
-          class="sign-form__email input"
-          type="text"
-          name="userName"
-          placeholder="Email or username"
-        />
-        <input
-          class="sign-form__password input"
-          type="password"
-          name="password"
-          placeholder="Password"
-        />
-        <div class="sign-form__button">
-          <button class="btn" type="submit">Sign in</button>
-        </div>
-      </form>
+    <div class="content">
+      <div class="container">
+        <form class="sign-form sign-in-form">
+          <div class="sign-form__title">Sign in</div>
+          <div class="sign-form__inputs">
+            <input
+              class="sign-form__email input"
+              type="text"
+              name="userName"
+              placeholder="Email or username"
+            />
+            <input
+              class="sign-form__password input"
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+          </div>
+          <div class="sign-form__button">
+            <button class="btn" type="submit">Sign in</button>
+          </div>
+        </form>
+      </div>
     </div>
     <script src="src/assets/scripts/authorForm.js"></script>
   </body>

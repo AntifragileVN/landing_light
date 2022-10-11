@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="src/assets/style/addCards.css">
-    <link rel="stylesheet" href="src/assets/style/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/assets/style/addCards.css" />
+    <link rel="stylesheet" href="src/assets/style/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Add card</title>
-</head>
-<body>
-   <div class="content">
-        <div class="thick-line">
-            <div class="thick-line__text">Realities cards</div>
+  </head>
+  <body>
+    <div class="content">
+      <div class="thick-line">
+        <div class="thick-line__text">Realities games</div>
+      </div>
+    </div>
+    <div class="content">
+      <form class="game-form">
+        <div class="game-form__title">Add new game</div>
+        <div class="game-form__inputs">
+          <input
+            class="game-form__input"
+            type="text"
+            name="gameName"
+            placeholder="Game name"
+          />
+          <input
+            class="game-form__input"
+            type="text"
+            name="gameDescription"
+            placeholder="Game description"
+          />
+          <input
+            class="game-form__input"
+            type="text"
+            name="gameImageName"
+            placeholder="Game image name"
+          />
         </div>
-   </div> 
-   <div class="content">
-    <form class="card-form">
-        <div class="card-form__title">Add new card</div>
-        <div class="card-form__inputs">
-            <input class="card-form__input" type="text" placeholder="Card name">
-            <input class="card-form__input" type="text" placeholder="Card description">
-            <input class="card-form__input" type="text" placeholder="Card image name">
+        <div class="game-form__button">
+          <button type="submit" class="btn">Add game</button>
         </div>
-        <div class="card-form__button">
-            <button class="btn">Add</button>
-        </div>
-    </form>
-   </div> 
-    
-</body>
+      </form>
+    </div>
+    <script src="src/assets/scripts/add-game.js"></script>
+  </body>
 </html>

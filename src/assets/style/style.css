@@ -83,7 +83,7 @@ a {
   border: none;
   cursor: pointer;
   padding: 4px;
-  z-index: 100;
+  z-index: 60;
 }
 
 .header__close-btn {
@@ -98,10 +98,10 @@ a {
 }
 
 .header__mobile-menu {
-  display: none;
   background: #000;
   transition: 0.3s;
   opacity: 0;
+  pointer-events: none;
   border-radius: 7px;
   flex-direction: column;
   padding: 12px;
@@ -109,12 +109,18 @@ a {
   position: absolute;
   right: -16px;
   top: 3px;
-  z-index: 100;
+  z-index: 50;
   letter-spacing: 0.0275em;
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
   border: 0.5px solid rgb(49, 49, 49);
+}
+
+.close {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
 }
 
 .menu__list {
@@ -127,9 +133,30 @@ a {
   font-weight: 500;
   font-size: 12.5098px;
   line-height: 15px;
+  min-height: 100%;
 }
 
-.menu__item:hover {
+.menu_mobile-item {
+  font-weight: 500;
+  font-size: 12.5098px;
+  line-height: 15px;
+  padding-right: 54px;
+  display: flex;
+  align-items: center;
+}
+
+.menu__link {
+  position: relative;
+}
+
+.menu__link:hover {
+  background: -webkit-linear-gradient(99.05deg, #c824ec 0.07%, #df308d 106.32%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.menu__mobile-link:hover {
   background: -webkit-linear-gradient(99.05deg, #c824ec 0.07%, #df308d 106.32%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -153,7 +180,8 @@ a {
   border-radius: 6px;
   display: block;
   position: absolute;
-  left: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   top: 22px;
 }
 
@@ -261,7 +289,7 @@ a {
 
 .hero__decor {
   position: relative;
-  z-index: 50;
+  z-index: -1;
 }
 
 .hero__cinematic {
@@ -872,8 +900,10 @@ select {
     display: block;
   }
 
-  .header__mobile-menu {
-    display: block;
+  .show {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s;
   }
 
   .menu__list {
@@ -882,13 +912,6 @@ select {
     padding: 0px 0px 16px 0px;
     gap: 10px;
     margin: 0px 0px;
-  }
-
-  .menu__item {
-    padding-right: 54px;
-    margin-right: 0;
-    display: flex;
-    align-items: center;
   }
 
   .menu__button {

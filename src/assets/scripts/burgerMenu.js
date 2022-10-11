@@ -2,32 +2,47 @@ const headerBurger = document.querySelector(".header__burger");
 const headerMobileMenu = document.querySelector(".header__mobile-menu");
 const headerBurgerClose = document.querySelector(".header__close-btn ");
 
-const handleBurgerBtnClick = () => {
-  headerBurger.style.cssText = `
-    opacity: 0;
-    pointer-events: none;
-    `;
+function open() {
+  headerMobileMenu.classList.remove("close");
+  headerMobileMenu.classList.add("show");
+  headerBurger.classList.add("close");
+}
 
-  headerMobileMenu.style.cssText = `
-    opacity: 1;
-    pointer-events: all;
-    transition: 0.5s;
-    `;
+const handleBurgerBtnClick = () => {
+  open();
+};
+
+function close() {
+  headerMobileMenu.classList.remove("show");
+  headerMobileMenu.classList.add("close");
+  headerBurger.classList.remove("close");
+}
+
+const handleBurgerCloseClick = () => {
+  close();
 };
 
 headerBurger.addEventListener("click", handleBurgerBtnClick);
 
-const handleBurgerCloseClick = () => {
-  headerBurger.style.cssText = `
-    opacity: 1;
-    pointer-events: all;
-    `;
-
-  headerMobileMenu.style.cssText = `
-    opacity: 0; 
-    pointer-events: none;
-    transition: 0.5s;
-  `;
-};
-
 headerBurgerClose.addEventListener("click", handleBurgerCloseClick);
+
+// const handleDocumentClick = (e) => {
+//   if (e.target.matches("header__burger") || e.target.matches("burger__icon"))
+//     return;
+
+//   if (!e.target.matches("header__mobile-menu")) {
+//     close();
+//   }
+// };
+
+// document.addEventListener("click", handleDocumentClick);
+
+document.addEventListener("click", (e) => {
+  let clickInside = headerMobileMenu.contains(e.target);
+  let clickBurger = headerBurger.contains(e.target);
+  if (!clickInside && !clickBurger) {
+    close();
+  }
+});
+
+// document.body.style.cursor = "none";

@@ -22,38 +22,40 @@
         <img class="logo" src="src/assets/icons/Header__logo.svg">
 
         <button class="header__burger">
-            <img src="src/assets/icons/Header__burger.svg" alt="burger__menu">
+            <img class="burger-icon" src="src/assets/icons/Header__burger.svg" alt="burger__menu">
         </button>
-            <nav class="header__mobile-menu">
-            <div class="header__mobile-buttons"> <button class="header__close-btn"><img  src="src/assets/icons/Header__burger-close.svg" alt="close"></button></div>
+            <nav class="header__mobile-menu close">
+            <div class="header__mobile-buttons" id ="headerMobileButtons">
+                 <button class="header__close-btn"><img  src="src/assets/icons/Header__burger-close.svg" alt="close"></button>
+                </div>
                
                 <ul class="menu__list">
                     
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Home</a>
+                    <li class="menu__mobile-item">
+                        <a href="#" class="menu__mobile-link">Home</a>
                     </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Card managment</a>
+                    <li class="menu__mobile-item">
+                        <a href="#" class="menu__mobile-link">Card managment</a>
                     </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Company</a>
+                    <li class="menu__mobile-item">
+                        <a href="#" class="menu__mobile-link">Company</a>
                     </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Features</a>
+                    <li class="menu__mobile-item">
+                        <a href="#" class="menu__mobile-link">Features</a>
                     </li>
                 </ul>
                 <button class="menu__button"><a class="btn-link" href="SignIn.html">Sign in</a></button>
             </nav>
         <nav class="menu">
             <ul class="menu__list">
-                <li class="menu__item menu__item--active ">
-                    <a href="#" class="menu__link menu__link--active">Home</a>
+                <li class="menu__item">
+                    <a href="#" class="menu__link menu__link--active" data-categori="Home">Home</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="menu__link">Company</a>
+                    <a href="#" class="menu__link" data-categori="Company">Company</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="menu__link">Features</a>
+                    <a href="#" class="menu__link" data-categori="Features" >Features</a>
                 </li>
             </ul>
             <button class="menu__button"><a class="btn-link" href="SignIn.html">Sign in</a></button>
@@ -62,7 +64,7 @@
     </div>
     </header>
    
-<main>
+<main class="main">
     <section class="hero">
     <div class="container">
         <div class="hero__inner">
@@ -141,7 +143,7 @@
         <div class="headsets__top">
             <div class="headsets__title">Mixed Reality Headsets</div>
             <div class="headsets__order">
-            <select name="order" id="">
+            <select class="order" name="order" id="">
                 <option value="first" checked>New first</option>
                 <option value="last">New last</option>
             </select>
@@ -369,6 +371,9 @@
 </footer>
  <script src="src/assets/scripts/burgerMenu.js"></script>
  <script src="src/assets/scripts/footer__form.js" ></script>
+ <script src="src/assets/scripts/active__links.js"></script>
+<script src="src/assets/scripts/body-elements.js"></script>
+ <script src="src/assets/scripts/order.js"></script>
 </div>
 </body>
 </html>
