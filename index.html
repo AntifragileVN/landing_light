@@ -16,6 +16,53 @@
 </head>
 <body class="body">
 <div class="elipse__container">
+     <div class="overlay">
+      <form class="modal__form">
+        <div class="modal__form-title">Add new game</div>
+        <div class="modal__form-inputs">
+          <input
+            class="modal__form-input"
+            type="text"
+            name="gameName"
+            placeholder="Game name"
+          />
+          <input
+            class="modal__form-input"
+            type="text"
+            name="gameDescription"
+            placeholder="Game description"
+          />
+          <input
+            class="modal__form-input"
+            type="text"
+            name="gameImageName"
+            placeholder="Game image name"
+          />
+        </div>
+          <button class="modal__form-button" type="submit" class="btn">Add game</button>
+      </form>
+    </div>
+    <div class="overlay close">
+        <form class="modal__form">
+          <div class="modal__form-title">Sign in</div>
+          <div class="modal__form-inputs">
+            <input
+              class="modal__form-input"
+              type="text"
+              name="userName"
+              placeholder="Email or username"
+            />
+            <input
+              class="modal__form-input"
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+          </div>
+            <button class="modal__form-button" type="submit">Sign in</button>
+        </form>
+      </div>
+
     <header class="header">
         <div class="container">
             <div class="header__inner">
@@ -58,7 +105,7 @@
                     <a href="#" class="menu__link" data-categori="Features" >Features</a>
                 </li>
             </ul>
-            <button class="menu__button"><a class="btn-link" href="SignIn.html">Sign in</a></button>
+            <button class="menu__sign-button" type="submit">Sign in</button>
             </div>
         </nav>
     </div>
@@ -374,6 +421,7 @@
  <script src="src/assets/scripts/active__links.js"></script>
 <script src="src/assets/scripts/body-elements.js"></script>
  <script src="src/assets/scripts/order.js"></script>
+ <script src="src/assets/scripts/modalSignIn.js"></script>
 </div>
 </body>
 </html>
