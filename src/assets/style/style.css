@@ -502,29 +502,57 @@ a {
   max-width: 290px;
 }
 
-/* ********************** Headsets ******************************* */
+/* ********************** games ******************************* */
 
-.headsets__inner {
+.games-header__inner {
+  padding: 19px 12px 0px 38px;
+}
+
+.games__inner {
   padding-left: 43px;
 }
 
-.headsets__top {
+.games__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 38px;
   margin-bottom: 20px;
+  padding-right: 10px;
 }
 
-.headsets__title {
+.games__buttons {
+  display: flex;
+}
+
+.games__title {
+  display: flex;
+
+  /* margin-right: 454px; */
   font-family: "Orbitron";
   font-style: normal;
   font-weight: 900;
-  font-size: 17.0986px;
+  font-size: 17px;
   line-height: 27px;
   justify-content: start;
 }
 
-.headsets__order {
+.games__btn {
+  padding: 12px 9px;
+  margin-right: 20px;
+  border-radius: 4px;
+  border: none;
+  background: linear-gradient(to right, #bc3cd8, #c54b8c);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 13px;
+  max-height: 37px;
+  display: flex;
+  cursor: pointer;
+}
+
+.games__order {
   justify-content: end;
 }
 option {
@@ -533,35 +561,36 @@ option {
 }
 
 select {
+  padding: 7px 30px 7px 9px;
   color: #fff;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 4px;
 }
 
-.headsets__images {
+.games__images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 40px;
 }
 
-.headsets__images-mobile {
+.games__images-mobile {
   display: none;
   grid-template-columns: repeat(1, auto);
   grid-template-rows: repeat(3, auto);
   gap: 40px;
 }
 
-.headsets__item {
+.games__item {
   position: relative;
 }
 
-.headsetes__img {
+.games__img {
   position: relative;
   height: 100%;
 }
 
-.headsets__img-info {
+.games__img-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -578,7 +607,7 @@ select {
   max-width: 107px;
 }
 
-.headsetes__img-name {
+.games__img-name {
   font-family: "Orbitron";
   font-style: normal;
   font-weight: 600;
@@ -590,28 +619,28 @@ select {
   margin-bottom: 6px;
 }
 
-.headsetes__img-description {
+.games__img-description {
   font-weight: 400;
   font-size: 7.29569px;
   line-height: 9px;
   letter-spacing: -0.02em;
 }
 
-.headsets__pages-list {
+.games__pages-list {
   margin-top: 23px;
   display: flex;
   justify-content: center;
   padding: 0;
 }
 
-.headsets__pages {
+.games__pages {
   list-style: none;
   display: flex;
   gap: 8px;
   padding: 0;
 }
 
-.headsets__link {
+.games__link {
   background-color: #fff;
   border: 1px solid #dfe3e8;
   border-radius: 4px;
@@ -630,12 +659,12 @@ select {
   color: #000;
 }
 
-.headsets__link:hover {
+.games__link:hover {
   color: #4200ff;
   border: 1px solid #4200ff;
 }
 
-.headsets__link--color {
+.games__link--color {
   background-color: #919eab;
   border-radius: 4px;
   display: flex;
@@ -653,7 +682,7 @@ select {
   color: #c4cdd5;
 }
 
-.headsets__link--color:hover {
+.games__link--color:hover {
   color: #fff;
   border: 1px solid #fff;
 }
@@ -738,8 +767,8 @@ select {
 
   backdrop-filter: blur(6px);
   border-radius: 7px;
-  max-width: 143px;
-  padding: 5px 7px 7px 10px;
+  max-width: 184px;
+  padding: 8px;
 }
 
 .reviews__massages-mobile {
@@ -748,7 +777,7 @@ select {
 
 .reviews__mes-title {
   font-weight: 700;
-  font-size: 4.97691px;
+  font-size: 11px;
   line-height: 9px;
   letter-spacing: 0.07em;
   margin-bottom: 9px;
@@ -758,8 +787,8 @@ select {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 5.52896px;
-  line-height: 9px;
+  font-size: 8px;
+  line-height: 12px;
   margin-bottom: 12px;
 }
 
@@ -1024,13 +1053,13 @@ select {
     padding: 11px 47px;
   }
 
-  .headsets__images {
+  .games__images {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
   }
 
-  .headsets__inner {
+  .games__inner {
     padding-left: 43px;
   }
 
@@ -1124,11 +1153,11 @@ select {
     max-width: 92px;
   }
 
-  .headsets__inner {
+  .games__inner {
     padding: 0px;
   }
 
-  .headsets__order {
+  .games__order {
     max-width: 103px;
     font-family: "Inter";
     font-style: normal;
@@ -1140,11 +1169,11 @@ select {
     letter-spacing: 0.018em;
   }
 
-  .headsets__top {
+  .games__top {
     padding: 0px 0px 0px;
   }
 
-  .headsets__title {
+  .games__title {
     font-family: "Orbitron";
     font-style: normal;
     font-weight: 900;
@@ -1152,15 +1181,15 @@ select {
     line-height: 27px;
   }
 
-  .headsets__images {
+  .games__images {
     display: none;
   }
 
-  .headsetes__img {
+  .games__img {
     max-width: 100%;
   }
 
-  .headsets__images-mobile {
+  .games__images-mobile {
     display: grid;
     justify-items: center;
   }

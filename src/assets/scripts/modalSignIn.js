@@ -1,9 +1,11 @@
-const modalBlock = document.querySelector(".overlay");
-const modalSignForm = document.querySelector(".modal__form");
-const signInBtn = document.querySelector(".menu__sign-button");
+const modaSignInlBlock = document.querySelector("#modalSignInForm");
+const modaAddGameBlock = document.querySelector("#modalAddGameForm");
+
+const AddGameBtn = document.querySelector("#addNewGame");
+const signInBtn = document.querySelector("#modalSignInBtn");
 
 function openSignModal() {
-  modalBlock.classList.remove("close");
+  modaSignInlBlock.classList.remove("close");
 }
 
 const handleSignInBtnClick = () => {
@@ -12,7 +14,7 @@ const handleSignInBtnClick = () => {
 };
 
 const closeSignModal = () => {
-  modalBlock.classList.add("close");
+  modaSignInlBlock.classList.add("close");
 };
 
 // const handleBurgerCloseClick = () => {
@@ -24,8 +26,25 @@ signInBtn.addEventListener("click", handleSignInBtnClick);
 document.addEventListener("click", (e) => {
   if (
     !e.target.closest(".modal__form") &&
-    !e.target.matches(".menu__sign-button")
+    (!e.target.matches("#modalSignInBtn") ||
+      !e.target.matches("#modalAddGameForm"))
   ) {
     closeSignModal();
+    closeAddGameModal();
   }
 });
+
+function openAddGameModal() {
+  modaAddGameBlock.classList.remove("close");
+}
+
+const closeAddGameModal = () => {
+  modaAddGameBlock.classList.add("close");
+};
+
+const handleAddGameBtnClick = () => {
+  openAddGameModal();
+  console.log("gh");
+};
+
+AddGameBtn.addEventListener("click", handleAddGameBtnClick);

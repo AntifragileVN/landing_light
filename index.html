@@ -16,7 +16,7 @@
 </head>
 <body class="body">
 <div class="elipse__container">
-     <div class="overlay">
+     <div class="overlay close">
       <form class="modal__form">
         <div class="modal__form-title">Add new game</div>
         <div class="modal__form-inputs">
@@ -42,7 +42,7 @@
           <button class="modal__form-button" type="submit" class="btn">Add game</button>
       </form>
     </div>
-    <div class="overlay close">
+    <div class="overlay close" id="modalSignInForm">
         <form class="modal__form">
           <div class="modal__form-title">Sign in</div>
           <div class="modal__form-inputs">
@@ -99,13 +99,13 @@
                     <a href="#" class="menu__link menu__link--active" data-categori="Home">Home</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="menu__link" data-categori="Company">Company</a>
+                    <a href="games.html" class="menu__link" data-categori="Company">Games</a>
                 </li>
                 <li class="menu__item">
                     <a href="#" class="menu__link" data-categori="Features" >Features</a>
                 </li>
             </ul>
-            <button class="menu__sign-button" type="submit">Sign in</button>
+            <button class="menu__sign-button" id="modalSignInBtn" type="submit">Sign in</button>
             </div>
         </nav>
     </div>
@@ -124,7 +124,7 @@
             real and you can play the game with a new style.
     </div>
 <div class="hero__links">
-    <button class="button hero__btn"><a href="addCards.html">Add new card</a></button>
+    <button class="button hero__btn"><a href="">Invite Friend</a></button>
     <a href="#" class="hero__link">Explore Device</a>
 </div>
 <div class="hero__people">
@@ -168,7 +168,7 @@
                     <div class="expirience__text">You can try playing the game with a
                         new style and of course a more real feel, like you are the main characterin your game and adventure in this
                         new digital world.</div>
-                        <button class="button expirience__button"><a href="index.html/footer__form">Get it now</a></button>
+                        <button class="button expirience__button"><a href="#footer__submit">Get it now</a></button>
                 </div>
             </div>
         </div>
@@ -184,123 +184,6 @@
     </div>
 </section>
 
-<section class="headsets">
-    <div class="container">
-        <div class="headsets__inner">
-        <div class="headsets__top">
-            <div class="headsets__title">Mixed Reality Headsets</div>
-            <div class="headsets__order">
-            <select class="order" name="order" id="">
-                <option value="first" checked>New first</option>
-                <option value="last">New last</option>
-            </select>
-            </div>
-        </div>
-        <div class="headsets__images">
-            <div class="headsets__item">
-                <img class="headsetes__img" src="src/components/images/Headsets__img.png" alt="" >
-                <div class="headsets__img-info">
-                    <div class="headsetes__img-name">Metaverse</div>
-                    <div class="headsetes__img-description">A Network of 3D virtual 
-                    worlds focused on social connection.</div>
-                </div>
-            </div>
-            <div class="headsets__item">
-                <img class="headsetes__img" src="src/components/images/Headsets__img.png" alt="" >
-                <div class="headsets__img-info">
-                    <div class="headsetes__img-name">Metaverse</div>
-                    <div class="headsetes__img-description">A Network of 3D virtual 
-                    worlds focused on social connection.</div>
-                </div>
-            </div>
-            <div class="headsets__item">
-                <img class="headsetes__img" src="src/components/images/Headsets__img.png" alt="" >
-                <div class="headsets__img-info">
-                    <div class="headsetes__img-name">Metaverse</div>
-                    <div class="headsetes__img-description">A Network of 3D virtual 
-                    worlds focused on social connection.</div>
-                </div>
-            </div>
-            <div class="headsets__item">
-                <img class="headsetes__img" src="src/components/images/Headsets__img.png" alt="" >
-                <div class="headsets__img-info">
-                    <div class="headsetes__img-name">Metaverse</div>
-                    <div class="headsetes__img-description">A Network of 3D virtual 
-                    worlds focused on social connection.</div>
-                </div>
-            </div>
-            <div class="headsets__item">
-                <img class="headsetes__img" src="src/components/images/Headsets__img.png" alt="" >
-                <div class="headsets__img-info">
-                    <div class="headsetes__img-name">Metaverse</div>
-                    <div class="headsetes__img-description">A Network of 3D virtual 
-                    worlds focused on social connection.</div>
-                </div>
-            </div>
-            <div class="headsets__item">
-                <img class="headsetes__img" src="src/components/images/Headsets__img.png" alt="" >
-                <div class="headsets__img-info">
-                    <div class="headsetes__img-name">Metaverse</div>
-                    <div class="headsetes__img-description">A Network of 3D virtual 
-                    worlds focused on social connection.</div>
-                </div>
-            </div>
-        </div>
-        <div class="headsets__images-mobile">
-         <div class="headsets__item">
-              <img
-                class="headsetes__img"
-                src="src/components/images/Headsets__mobile-img.png"
-                alt=""
-              />
-              <div class="headsets__img-info">
-                <div class="headsetes__img-name">Metaverse</div>
-                <div class="headsetes__img-description">
-                  A Network of 3D virtual worlds focused on social connection.
-                </div>
-              </div>
-            </div>
-            <div class="headsets__item">
-              <img
-                class="headsetes__img"
-                src="src/components/images/Headsets__mobile-img.png"
-                alt=""
-              />
-              <div class="headsets__img-info">
-                <div class="headsetes__img-name">Metaverse</div>
-                <div class="headsetes__img-description">
-                  A Network of 3D virtual worlds focused on social connection.
-                </div>
-              </div>
-            </div>
-            <div class="headsets__item">
-              <img
-                class="headsetes__img"
-                src="src/components/images/Headsets__mobile-img.png"
-                alt=""
-              />
-              <div class="headsets__img-info">
-                <div class="headsetes__img-name">Metaverse</div>
-                <div class="headsetes__img-description">
-                  A Network of 3D virtual worlds focused on social connection.
-                </div>
-              </div>
-            </div>
-            </div>
-        <div class="headsets__pages-list">
-            <ul class="headsets__pages">
-            <li class="headsets__list-item"><a href="" class="headsets__link--color">&#60;</a></li>
-            <li class="headsets__list-item"><a href="" class="headsets__link">1</a></li>
-            <li class="headsets__list-item"><a href="" class="headsets__link">2</a></li>
-            <li class="headsets__list-item"><a href="" class="headsets__link">...</a></li>
-            <li class="headsets__list-item"><a href="" class="headsets__link">9</a></li>
-            <li class="headsets__list-item"><a href="" class="headsets__link">10</a></li>
-            <li class="headsets__list-item"><a href="" class="headsets__link">&#62;</a></li>
-           </ul>
-        </div>
-    </div>
-    </div>
-</section>
 <section class="reviews">
     <div class="container">
             <div class="reviews__inner">
@@ -408,7 +291,7 @@
         visual identities for products and branda in your company.</div>
         <div class="footer__inputs">
             <input class="footer__input" type="email" name="email" placeholder="Your Email" required>
-            <button class="footer__submit button" type="submit">Start <img class="footer__submit-icon" src="src/assets/icons/Footer__submit.svg" alt=""></button>
+            <button class="footer__submit button" type="submit" id="footer__submit" >Start <img class="footer__submit-icon" src="src/assets/icons/Footer__submit.svg" alt=""></button>
         </div>
     </form>
         <img class="footer__decoration" src="src/components/images/Footer__decoration.png" alt="">
