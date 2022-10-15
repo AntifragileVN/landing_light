@@ -890,7 +890,7 @@ select {
 
 .footer__inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 42px;
   background: linear-gradient(
     180deg,
@@ -905,6 +905,16 @@ select {
   margin: 0px 42px 35px 44px;
 }
 
+.footer__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 28px 0px;
+  /* max-width: 164px; */
+  position: relative;
+}
+
 .footer__title {
   font-family: "Orbitron";
   font-style: normal;
@@ -917,22 +927,21 @@ select {
 
 .footer__text {
   font-weight: 400;
-  font-size: 9px;
+  font-size: 10px;
   line-height: 11px;
   letter-spacing: 0.04em;
-
-  max-width: 205px;
   padding-bottom: 12px;
 }
 
 .footer__inputs {
   display: flex;
+  justify-content: center;
   max-height: 19px;
 }
 
 .footer__input {
   font-weight: 400;
-  font-size: 6.48506px;
+  font-size: 6.5px;
   line-height: 11px;
   letter-spacing: -0.07em;
   color: rgba(224, 163, 201, 0.56);
@@ -953,11 +962,6 @@ select {
   border-radius: 2px;
 }
 
-.footer__form {
-  padding: 18px 0px 46px 17px;
-  max-width: 164px;
-}
-
 .footer__submit {
   padding: 5px 9px 5px 13px;
   display: flex;
@@ -972,8 +976,13 @@ select {
 }
 
 .footer__decoration {
-  max-width: 854px;
-  border-radius: 0px 7px 7px 0px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../components/images/Footer__decoration.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  border-radius: 7px;
 }
 
 .footer__decoration-mobile {

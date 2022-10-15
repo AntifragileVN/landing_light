@@ -14,7 +14,7 @@
     <title>Games</title>
   </head>
   <body class="body">
- <div class="overlay close" id="modalAddGameForm">
+ <!-- <div class="overlay close" id="modalAddGameForm">
       <form class="modal__form">
         <div class="modal__form-title">Add new game</div>
         <div class="modal__form-inputs">
@@ -30,6 +30,12 @@
             name="gameDescription"
             placeholder="Game description"
           />
+           <input
+            class="modal__form-input"
+            type="text"
+            name="gameReview"
+            placeholder="Game review"
+          />
           <input
             class="modal__form-input"
             type="text"
@@ -39,7 +45,7 @@
         </div>
           <button class="modal__form-button" type="submit" class="btn">Add game</button>
       </form>
-    </div>
+    </div> -->
 
      <div class="overlay close" id="modalSignInForm">
         <form class="modal__form">
@@ -65,11 +71,12 @@
     <header class="header">
         <div class="container">
             <div class="header__inner games-header__inner ">
-        <img class="logo" src="src/assets/icons/Header__logo.svg">
-
-        <button class="header__burger">
-            <img class="burger-icon" src="src/assets/icons/Header__burger.svg" alt="burger__menu">
-        </button>
+              <a href="index.html">
+                 <img class="logo" src="src/assets/icons/Header__logo.svg">
+              </a>
+            <button class="header__burger">
+                <img class="burger-icon" src="src/assets/icons/Header__burger.svg" alt="burger__menu">
+            </button>
             <nav class="header__mobile-menu close">
             <div class="header__mobile-buttons" id ="headerMobileButtons">
                  <button class="header__close-btn"><img  src="src/assets/icons/Header__burger-close.svg" alt="close"></button>
@@ -116,7 +123,7 @@
         <div class="games__top">
             <div class="games__title">VR Games</div>
             <div class="games__buttons">
-               <button class="games__btn" id="addNewGame">Add new Game</button>
+               <button class="games__btn" id="addNewGameBtn">Add new Game</button>
             <div class="games__order">
             <select class="order" name="order" id="">
                 <option value="first" checked>New first</option>
@@ -231,7 +238,8 @@
     </div>
     </div>
 </section>
-<script src="src/assets/scripts/modalSignIn.js"></script>
+    <script src="src/assets/scripts/modalSignIn.js"></script>
+    <script src="src/assets/scripts/modalAddCard.js" ></script>
     <script src="src/assets/scripts/active__links.js"></script>
     <!-- <script src="src/assets/scripts/add-game.js"></script> -->
   </body>
