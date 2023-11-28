@@ -6,9 +6,17 @@
 
 /*----------- GENERAL -----------*/
 
+:root {
+	--white-color: #fff;
+	--title-font: 'Orbitron', sans-serif;
+	--text-font: 'Inter', sans-serif;
+	--mb-30: 30px;
+	--mb-20: 20px;
+}
+
 * {
-	color: white;
-	font-family: 'Inter';
+	color: var(--white-color);
+	font-family: var(--text-font);
 	font-style: normal;
 }
 
@@ -34,6 +42,10 @@ a {
 	padding: 0;
 }
 
+p {
+	margin: 0;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -51,20 +63,15 @@ img {
 /*----------- LAYOUT -----------*/
 
 .container {
-	max-width: 860px;
 	margin: 0 auto;
 	position: relative;
 	padding-left: 15px;
 	padding-right: 15px;
 }
 
-@media screen and (min-width: 568) {
-	.container {
-		max-width: 860px;
-		margin: 0 auto;
-		position: relative;
-		padding: 0px 50px;
-	}
+.icon {
+	width: 25px;
+	height: 25px;
 }
 
 .section {
@@ -72,15 +79,14 @@ img {
 }
 
 .section__title {
-	font-family: 'Orbitron';
+	font-family: var(--title-font);
 	font-weight: 900;
 	font-size: 21px;
 	line-height: 1.6;
-	margin-bottom: 20px;
+	margin-bottom: var(--mb-30);
 }
 
 .section__text {
-	font-family: 'Inter', sans-serif;
 	font-size: 12px;
 	line-height: 1.2;
 }
@@ -128,7 +134,7 @@ img {
 }
 
 .modal__form-title {
-	font-family: 'Orbitron';
+	font-family: var(--title-font);
 	font-weight: 600;
 	font-size: 24px;
 	line-height: 30px;
@@ -146,8 +152,8 @@ img {
 
 .modal__form-input {
 	background-color: #000;
-	margin-bottom: 16px;
-	border: 3px solid #ffffff;
+	margin-bottom: var(--mb-20);
+	border: 3px solid var(--white-color);
 	border-radius: 5px;
 	padding: 32px 18px;
 	width: 400px;
@@ -174,6 +180,7 @@ img {
 
 .header {
 	margin-bottom: 80px;
+	position: relative;
 }
 
 .btn-link {
@@ -187,7 +194,6 @@ img {
 	justify-content: space-between;
 	align-items: center;
 	padding-top: 20px;
-	position: relative;
 }
 
 .header__inner::before {
@@ -197,8 +203,11 @@ img {
 		rgba(170, 20, 240, 0.31) 0%,
 		rgba(170, 20, 240, 0) 100%
 	);
-	width: 572.95px;
-	height: 552.48px;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+	width: 572px;
+	height: 552px;
 	border-radius: 50%;
 	position: absolute;
 	z-index: -1;
@@ -305,7 +314,7 @@ img {
 .menu__link--active::after {
 	content: '';
 	width: 10px;
-	border: 2px solid #ffffff;
+	border: 2px solid var(--white-color);
 	border-radius: 6px;
 	display: block;
 	position: absolute;
@@ -316,33 +325,33 @@ img {
 
 /* ********************** Hero ******************************* */
 
-.hero__inner {
-	display: flex;
+.hero {
 	position: relative;
 }
 
-.hero__elipse {
-	position: absolute;
-	top: 300px;
-	right: 10%;
-}
-
-.hero__elipse::before {
+.hero__inner::after {
 	content: '';
 	background: radial-gradient(
 		37.26% 37.26% at 3.09% 44.12%,
 		rgba(170, 20, 240, 0.31) 0%,
 		rgba(170, 20, 240, 0) 100%
 	);
-	width: 644px;
-	height: 645px;
+
+	width: 544px;
+	height: 545px;
 	border-radius: 50%;
+
 	position: absolute;
+	top: 30%;
+	left: 110%;
+	transform: translate(-50%, -50%);
 	z-index: -1;
 }
 
 .hero__links {
-	margin-bottom: 25px;
+	display: flex;
+	align-items: center;
+	margin-bottom: var(--mb-30);
 }
 .hero__link {
 	margin-left: 20px;
@@ -383,31 +392,19 @@ img {
 }
 
 .hero__title {
-	margin-bottom: 24px;
+	margin-bottom: var(--mb-30);
 
-	font-weight: 900;
 	font-weight: 900;
 	font-size: 32px;
-	line-height: 43px;
-
-	max-width: 336px;
+	line-height: 1.3;
 }
 
 .hero__text {
-	max-width: 312px;
-	margin-bottom: 25px;
-}
-
-.hero__decor {
-	position: relative;
-	z-index: -1;
+	margin-bottom: var(--mb-30);
 }
 
 .hero__cinematic {
 	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
 }
 
 .hero__cinematic-wrapper {
@@ -423,13 +420,6 @@ img {
 	justify-content: flex-end;
 	align-items: center;
 	padding-bottom: 80px;
-}
-
-.hero__cinematic-line {
-	content: '';
-	border: 1px solid #fff;
-	min-width: 152px;
-	margin-bottom: 25px;
 }
 
 .hero__cinematic-title {
@@ -449,7 +439,7 @@ img {
 	width: 70%;
 	height: 2px;
 
-	background: #fff;
+	background: var(--white-color);
 }
 
 .hero__cinematic-text {
@@ -460,16 +450,8 @@ img {
 /* ********************** Expririence ******************************* */
 
 .expirience {
+	position: relative;
 	margin-bottom: 60px;
-}
-
-.expirience__title {
-	max-width: 220px;
-}
-
-.expirience__inner {
-	display: flex;
-	justify-content: space-between;
 }
 
 .expirience__inner::before {
@@ -503,15 +485,9 @@ img {
 	align-self: flex-end;
 }
 
-.expirience__info {
-	display: flex;
-	flex-direction: column;
-	align-self: flex-end;
-}
-
 .expirience__text {
 	max-width: 220px;
-	margin-bottom: 22px;
+	margin-bottom: var(--mb-30);
 }
 
 .expirience__button {
@@ -537,193 +513,38 @@ img {
 }
 
 .thick-line__text {
-	font-family: 'Orbitron';
+	font-family: var(--title-font);
 	font-weight: 600;
 	font-size: 18px;
 	line-height: 1.2;
 	max-width: 290px;
 }
 
-/* ********************** games ******************************* */
-
-.games-header__inner {
-	padding: 19px 12px 0px 38px;
-}
-
-.games__inner {
-	padding-left: 43px;
-}
-
-.games__top {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 38px;
-	margin-bottom: 20px;
-	padding-right: 10px;
-}
-
-.games__buttons {
-	display: flex;
-}
-
-.games__title {
-	display: flex;
-
-	/* margin-right: 454px; */
-	font-family: 'Orbitron';
-	font-weight: 900;
-	font-size: 17px;
-	line-height: 27px;
-	justify-content: start;
-}
-
-.games__btn {
-	padding: 12px 9px;
-	margin-right: 20px;
-	border-radius: 4px;
-	border: none;
-	background: linear-gradient(to right, #bc3cd8, #c54b8c);
-	text-decoration: none;
-	font-weight: 700;
-	font-size: 11px;
-	line-height: 13px;
-	max-height: 37px;
-	display: flex;
-	cursor: pointer;
-}
-
-.games__order {
-	justify-content: end;
-}
-option {
-	color: #000;
-	background-color: rgba(0, 0, 0, 0);
-}
-
-select {
-	padding: 7px 30px 7px 9px;
-	color: #fff;
-	background-color: rgba(0, 0, 0, 0);
-	border-radius: 4px;
-}
-
-.games__images {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	gap: 40px;
-}
-
-.games__images-mobile {
-	display: none;
-	grid-template-columns: repeat(1, auto);
-	grid-template-rows: repeat(3, auto);
-	gap: 40px;
-}
-
-.games__item {
-	position: relative;
-}
-
-.games__img {
-	position: relative;
-	height: 100%;
-}
-
-.games__img-info {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	position: absolute;
-	padding: 7px 11px 7px 13px;
-
-	bottom: 0;
-	left: 0;
-
-	background: rgba(255, 255, 255, 0.18);
-	backdrop-filter: blur(11px);
-	border-radius: 0px 5px 0px 5px;
-
-	max-width: 107px;
-}
-
-.games__img-name {
-	font-family: 'Orbitron';
-	font-weight: 600;
-	font-size: 7.29569px;
-	line-height: 9px;
-	text-align: center;
-	text-decoration-line: underline;
-
-	margin-bottom: 6px;
-}
-
-.games__img-description {
-	font-weight: 400;
-	font-size: 7.29569px;
-	line-height: 9px;
-	letter-spacing: -0.02em;
-}
-
-.games__pages-list {
-	margin-top: 23px;
-	display: flex;
-	justify-content: center;
-}
-
-.games__pages {
-	display: flex;
-	gap: 8px;
-	padding: 0;
-}
-
-.games__link {
-	background-color: #fff;
-	border: 1px solid #dfe3e8;
-	border-radius: 4px;
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	padding: 5px 5px;
-	min-width: 32px;
-	max-height: 32px;
-
-	font-family: 'SF Pro Text', sans-serif;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 20px;
-	color: #000;
-}
-
-.games__link:hover {
-	color: #4200ff;
-	border: 1px solid #4200ff;
-}
-
-.games__link--color {
-	background-color: #919eab;
-	border-radius: 4px;
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	padding: 5px 5px;
-	min-width: 32px;
-	min-height: 32px;
-
-	font-family: 'SF Pro Text', sans-serif;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 20px;
-	color: #c4cdd5;
-}
-
-.games__link--color:hover {
-	color: #fff;
-	border: 1px solid #fff;
-}
-
 /* ********************** Reviews ******************************* */
+
+.reviews {
+	position: relative;
+}
+
+.reviews__inner::before {
+	content: '';
+	position: absolute;
+
+	background: radial-gradient(
+		37.26% 37.26% at 50% 50%,
+		rgba(170, 20, 240, 0.31) 0%,
+		rgba(170, 20, 240, 0) 100%
+	);
+
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+
+	z-index: -1;
+	transform: translate(50%, -50%);
+	top: 0%;
+	right: 0%;
+}
 
 .reviews__inner {
 	display: flex;
@@ -746,36 +567,14 @@ select {
 	border-radius: 7px;
 }
 
-.reviews__inner::before {
-	content: '';
-	background: radial-gradient(
-		37.26% 37.26% at 50% 50%,
-		rgba(170, 20, 240, 0.31) 0%,
-		rgba(170, 20, 240, 0) 100%
-	);
-	width: 367.19px;
-	height: 354.08px;
-	border-radius: 50%;
-	position: absolute;
-	z-index: -1;
-
-	right: 100px;
-	bottom: -170px;
-}
-
 .reviews__title {
 	text-align: center;
 }
 
 .reviews__subtitle {
 	max-width: 429px;
-	margin-bottom: 15px;
+	margin-bottom: var(--mb-30);
 	text-align: center;
-}
-
-.reviews__massages {
-	display: flex;
-	gap: 25px;
 }
 
 .reviews__massage {
@@ -791,12 +590,8 @@ select {
 
 	backdrop-filter: blur(6px);
 	border-radius: 7px;
-	max-width: 300px;
+	max-width: 100%;
 	padding: 8px;
-}
-
-.reviews__massages-mobile {
-	display: none;
 }
 
 .reviews__mes-title {
@@ -807,13 +602,14 @@ select {
 	margin-bottom: 9px;
 }
 
+.reviews__mes-color {
+	color: rgb(247, 182, 3);
+}
+
 .reviews__text {
 	margin-bottom: 12px;
 }
 
-.reviews__mes-color {
-	color: rgb(247, 182, 3);
-}
 .reviews__person {
 	display: flex;
 	gap: 6px;
@@ -842,14 +638,6 @@ select {
 
 /* ********************** Values ******************************* */
 
-.values__inner {
-	display: flex;
-	justify-content: space-between;
-
-	padding-top: 30px;
-	padding-bottom: 45px;
-}
-
 .values__inner::before {
 	content: '';
 	background: radial-gradient(
@@ -857,14 +645,16 @@ select {
 		rgba(170, 20, 240, 0.31) 0%,
 		rgba(170, 20, 240, 0) 100%
 	);
+
 	width: 367px;
 	height: 354px;
 	border-radius: 50%;
 	position: absolute;
 	z-index: -1;
 
-	top: -80px;
-	right: 610px;
+	top: 0%;
+	left: 0%;
+	transform: translate(-50%, -50%);
 }
 
 .values__title {
@@ -885,10 +675,6 @@ select {
 	width: 20px;
 }
 
-.values__text {
-	max-width: 250px;
-}
-
 .values__images {
 	display: grid;
 	grid-template-columns: repeat(2, auto);
@@ -901,11 +687,12 @@ select {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	gap: 10px;
 }
 
 .values__description {
 	font-weight: 600;
-	font-size: 7px;
+	font-size: 10px;
 	line-height: 11px;
 	letter-spacing: 0.03em;
 }
@@ -913,34 +700,19 @@ select {
 /* ********************** FOOTER ******************************* */
 
 .footer__inner {
-	display: flex;
-	justify-content: center;
-	margin: 0 42px;
-	background: linear-gradient(
-		180deg,
-		#aa14f0 -42.59%,
-		rgba(0, 0, 0, 0) -42.59%,
-		#aa14f0 -42.58%,
-		rgba(170, 20, 240, 0.18) 4.35%,
-		rgba(151, 60, 68, 0.055) 99.99%,
-		rgba(185, 54, 245, 0) 100%
-	);
-	border-radius: 7px;
-	margin: 0px 42px 35px 44px;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 .footer__form {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
-	text-align: center;
-	padding: 28px 0px;
-	/* max-width: 164px; */
 	position: relative;
 }
 
 .footer__title {
-	margin-bottom: 11px;
+	margin-bottom: var(--mb-20);
 	position: relative;
 }
 
@@ -960,7 +732,7 @@ select {
 }
 
 .footer__text {
-	margin-bottom: 12px;
+	margin-bottom: var(--mb-20);
 }
 
 .footer__inputs {
@@ -970,12 +742,10 @@ select {
 }
 
 .footer__input {
-	font-weight: 400;
-	font-size: 6.5px;
-	line-height: 11px;
-	letter-spacing: -0.07em;
-	color: rgba(224, 163, 201, 0.56);
+	padding: 15px 15px;
+	font-size: 12px;
 
+	color: rgba(224, 163, 201, 0.56);
 	margin-right: 11px;
 	background: linear-gradient(
 		180deg,
@@ -989,13 +759,16 @@ select {
 	box-shadow: inset 0px -10px 16px rgba(255, 255, 255, 0.03);
 	border: none;
 	backdrop-filter: blur(6px);
-	border-radius: 2px;
+	border-radius: 5px;
 }
 
 .footer__submit {
 	position: relative;
 	display: flex;
 	align-items: center;
+
+	padding-top: 15px;
+	padding-top: 15px;
 }
 
 .footer__submit::after {
@@ -1026,24 +799,76 @@ select {
 	border-radius: 7px;
 }
 
-.footer__decoration-mobile {
-	display: none;
-	object-fit: cover;
-	z-index: 3;
-	opacity: 0.7;
-	background-position: right;
-	background-position-y: 15px;
-	border-radius: 0px 7px 7px 0px;
-}
-
-/* ********************** Media max-width:768px ******************************* */
-
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 576px) {
 	.container {
-		max-width: 768px;
-		padding: 0px 17px;
+		width: 576px;
+		margin: 0 auto;
+		position: relative;
 	}
 
+	.expirience__inner {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.expirience__info {
+		align-self: flex-end;
+	}
+
+	.expirience__title {
+		max-width: 220px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		width: 768px;
+	}
+
+	.hero__inner {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		padding-top: 33px;
+		gap: 24px;
+	}
+
+	.hero__title {
+		max-width: 336px;
+	}
+
+	.hero__text {
+		max-width: 312px;
+	}
+
+	.expirience__inner {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.reviews__massages {
+		display: flex;
+		gap: 30px;
+	}
+
+	.values__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.values__text {
+		max-width: 250px;
+	}
+}
+
+@media screen and (min-width: 991px) {
+	.container {
+		width: 992px;
+	}
+}
+
+@media screen and (max-width: 767px) {
 	.menu {
 		display: none;
 	}
@@ -1070,124 +895,68 @@ select {
 		padding: 8px 22px;
 	}
 
-	.hero__title {
-		font-size: 23px;
-		line-height: 33px;
-		text-align: center;
+	/* + */
+	.hero__cinematic-wrapper {
+		margin-bottom: 50px;
 	}
 
-	.hero__inner {
-		padding: 19px 0px 0px;
-		flex-direction: column-reverse;
-		padding-top: 33px;
-		gap: 24px;
-	}
-
+	/* + */
 	.hero__elipse::before {
 		display: none;
 	}
 
 	.hero__explore {
-		margin-left: 0;
-		margin-bottom: 24px;
-		justify-content: center;
+		display: flex;
+		flex-direction: column;
 		align-items: center;
-	}
-
-	.hero__text {
-		max-width: 330px;
 		text-align: center;
 	}
 
-	.hero__btn {
-		padding: 11px 47px;
+	.reviews__massage:not(:last-child) {
+		margin-bottom: var(--mb-30);
 	}
 
-	.games__images {
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(3, 1fr);
-		gap: 20px;
-	}
-
-	.games__inner {
-		padding-left: 43px;
-	}
-
-	.expirince__fotos {
-		margin-left: 0;
-	}
-
-	.footer__form {
-		margin-right: -20px;
-		z-index: 5;
-	}
-
-	.footer__decoration {
-		z-index: 1;
-	}
-}
-
-/* ********************** Media max-width: 576px ******************************* */
-
-@media screen and (max-width: 576px) {
-	.container {
-		max-width: 576px;
-		padding: 0px 17px;
-	}
-
-	.header__inner {
-		padding: 19px 0px 0px;
-	}
-
-	.header__inner::before {
-		right: 115px;
-	}
-
-	.expirience__inner {
+	.values__inner {
 		flex-direction: column;
-	}
-
-	.expirience__inner::before {
-		left: 220px;
-		top: 190px;
-	}
-
-	.expirince__fotos {
-		margin: 0px 0px 24px 0px;
 		justify-content: center;
 	}
 
-	.foto-boy {
-		max-width: 170px;
+	.values__info {
+		text-align: center;
+		margin-bottom: var(--mb-20);
 	}
 
-	.foto-girl {
-		max-width: 170px;
+	/* + */
+	.expirince__fotos {
+		margin-bottom: 40px;
 	}
+}
 
-	.expirience__info {
-		margin: 0;
+@media screen and (max-width: 576px) {
+	.hero__inner {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
+	.expirince__fotos {
+		justify-content: center;
+	}
 
-	.expirience__title {
-		max-width: 100%;
-		font-size: 18px;
-		margin-bottom: 8px;
+	.foto-boy {
+		max-width: 150px;
+	}
+
+	.foto-girl {
+		max-width: 150px;
+	}
+
+	.expirience__info {
+		text-align: center;
 	}
 
 	.expirience__text {
 		max-width: 100%;
-		text-align: center;
-		margin-bottom: 24px;
-	}
-
-	.expirience__button {
-		padding: 11px 77px;
-		max-width: 100%;
-		width: auto;
+		margin-bottom: var(--mb-30);
 	}
 
 	.thick-line__inner {
@@ -1201,124 +970,5 @@ select {
 	.thick-line__decor {
 		border-radius: 7px 20px 7px 7px;
 		max-width: 92px;
-	}
-
-	.games__inner {
-		padding: 0px;
-	}
-
-	.games__order {
-		max-width: 103px;
-		font-family: 'Inter';
-		font-weight: 500;
-		font-size: 12px;
-		line-height: 143%;
-		display: flex;
-		align-items: center;
-		letter-spacing: 0.018em;
-	}
-
-	.games__top {
-		padding: 0px 0px 0px;
-	}
-
-	.games__title {
-		font-family: 'Orbitron';
-		font-weight: 900;
-		font-size: 14px;
-		line-height: 27px;
-	}
-
-	.games__images {
-		display: none;
-	}
-
-	.games__img {
-		max-width: 100%;
-	}
-
-	.games__images-mobile {
-		display: grid;
-		justify-items: center;
-	}
-
-	.reviews__massages {
-		display: none;
-	}
-
-	.reviews__inner {
-		padding-bottom: 0px;
-	}
-
-	.reviews__inner::before {
-		right: -101px;
-		top: 47px;
-	}
-
-	.reviews__massages-mobile {
-		display: block;
-	}
-
-	.reviews__massage {
-		display: block;
-		max-width: 300px;
-		padding: 11px 136px 15px 22px;
-	}
-
-	.reviews__person-login {
-		margin: 3px 0px;
-	}
-
-	.reviews__text {
-		max-width: 130px;
-		margin-bottom: 44px;
-	}
-
-	.values__inner {
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px 0;
-	}
-
-	.values__inner::before {
-		display: none;
-	}
-
-	.values__inner::before {
-		right: 100px;
-	}
-
-	.values__info {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin-bottom: 16px;
-	}
-
-	.values__title {
-		margin-bottom: 16px;
-	}
-
-	.footer__inner {
-		padding: 0px 0px 10px 16px;
-		margin: 0;
-		justify-content: center;
-	}
-
-	.footer__form {
-		padding: 25px 0px 22px 14px;
-		margin-right: -25px;
-		z-index: 4;
-		background: transparent;
-	}
-
-	.footer__decoration {
-		display: none;
-	}
-
-	.footer__decoration-mobile {
-		display: block;
-		width: 80%;
 	}
 }
